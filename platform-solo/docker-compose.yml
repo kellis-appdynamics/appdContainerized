@@ -1,0 +1,22 @@
+version: '3'
+services:
+  platform:
+    build: ../base-rhel7ubi
+    extra_hosts:
+      - "platform1-docker:192.168.68.136"
+    ports:
+      - "8090"
+      - "8181"
+      - "9191"
+      - "7001"
+      - "7002"
+    ulimits:
+      nofile:
+        soft: "65535"
+        hard: "65535"
+      nproc:
+        soft: "8192"
+        hard: "8192"
+# Might need to set swappiness to 10, BUT I'm not sure exactly the requirements
+# The problem: v3 of compose doesn't appear to allow it to be set. However,
+# v2 does, but also wondering if there is another way or needed. TODO
