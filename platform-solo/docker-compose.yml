@@ -1,7 +1,15 @@
 version: '3'
 services:
+  platform_repo:
+    build: ../platformRepo
+    container_name: platform_repo
+    volumes:
+      - platform_repo:/sharedFiles
   platform:
     build: ../base-rhel7ubi
+    volumes:
+      - "appdInstallDir:/opt/appdynamics:nocopy"
+      - "platform_repo:/sharedFiles"
     extra_hosts:
       - "platform1-docker:192.168.68.136"
     ports:
@@ -20,3 +28,6 @@ services:
 # Might need to set swappiness to 10, BUT I'm not sure exactly the requirements
 # The problem: v3 of compose doesn't appear to allow it to be set. However,
 # v2 does, but also wondering if there is another way or needed. TODO
+volumes:
+  appdInstallDir:
+  platform_repo:
