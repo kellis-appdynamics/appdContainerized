@@ -1,0 +1,12 @@
+serverHostName=keellis1.kellis5137.com
+sys.languageId=en
+disableEULA=true
+
+platformAdmin.port=9191
+platformAdmin.databasePort=3377
+platformAdmin.dataDir=/opt/appdynamics/platform/mysql/data
+platformAdmin.databasePassword=appd
+platformAdmin.databaseRootPassword=appd
+platformAdmin.adminPassword=appd
+platformAdmin.useHttps$Boolean=false
+sys.installationDir=/opt/appdynamics/platform
