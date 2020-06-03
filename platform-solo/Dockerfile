@@ -1,4 +1,3 @@
-#FROM centos:centos7
 FROM registry.access.redhat.com/ubi7/ubi
 
 MAINTAINER Keith Ellis (keith.ellis@appdynamics.com)
