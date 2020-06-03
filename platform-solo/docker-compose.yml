@@ -6,18 +6,19 @@ services:
     volumes:
       - platform_repo:/sharedFiles
   platform:
-    build: ../base-rhel7ubi
+    build: .
+    hostname: 'keellis1.kellis5137.com'
     volumes:
       - "appdInstallDir:/opt/appdynamics:nocopy"
       - "platform_repo:/sharedFiles"
     extra_hosts:
       - "platform1-docker:192.168.68.136"
     ports:
-      - "8090"
-      - "8181"
-      - "9191"
-      - "7001"
-      - "7002"
+      - "8090:8090"
+      - "8181:8181"
+      - "9191:9191"
+      - "7001:7001"
+      - "7002:7002"
     ulimits:
       nofile:
         soft: "65535"

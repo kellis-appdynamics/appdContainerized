@@ -20,6 +20,9 @@ RUN yum install -y --disableplugin=subscription-manager http://mirror.centos.org
 RUN yum install -y --disableplugin=subscription-manager http://mirror.centos.org/centos/7/os/x86_64/Packages/numactl-2.0.12-5.el7.x86_64.rpm
 RUN yum install -y --disableplugin=subscription-manager glibc
 
+RUN yum install -y --disableplugin=subscription-manager openssh-clients
+RUN yum install -y --disableplugin=subscription-manager openssh
+
 # Install EPEL repositories to get numactl
 
 # Copy over the necessary scripts
