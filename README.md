@@ -14,5 +14,5 @@ Steps to run
   - Change platformAdmin.useHttps$Boolean value to true or false, depending on whether you need to use HTTPS
 - Change directory to "platform-solo"
 - Run "docker-compose ." You should now see the container start. It will take a while for the install to finish, but you should be able to continue once you see the line "Finishing installation ..."
-- Open a browser and go to "hostname:9191" and log into the Enterprice Console
+- Open a browser and go to "&lt;hostname:9191&gt;" and log into the Enterprice Console
 - From here, you should be able to perform a same server install, a single instance of the Platform, into the container. DO NOT change the installion directory as that is a location that has been created earlier in the container and changing the location could result in a failure to install.
