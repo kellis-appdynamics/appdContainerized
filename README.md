@@ -16,3 +16,15 @@ Steps to run
 - Run "docker-compose ." You should now see the container start. It will take a while for the install to finish, but you should be able to continue once you see the line "Finishing installation ..."
 - Open a browser and go to "&lt;hostname&gt;:9191" and log into the Enterprice Console
 - From here, you should be able to perform a same server install, a single instance of the Platform, into the container. DO NOT change the installion directory as that is a location that has been created earlier in the container and changing the location could result in a failure to install.
+
+## Potential next steps
+Next steps:
+- clean up what I have
+- document the install
+- remove its dependency on using root (I just start out with this because it's easier)
+- create a script to install the license once the controller is setup and running
+
+Future goals:
+- split up controller, event service nodes to run in separate containers
+- create a docker image for the EUM server
+- use the new "Cluster Manager", if it needs to be containerized (maybe it already does that?!)
